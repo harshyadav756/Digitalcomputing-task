@@ -31,34 +31,25 @@ function input9(){
 function input0(){
      document.getElementById("inputbox").value +="0"
 }
-function input (){
- document.getElementById("inputbox").value +=""
-}
-function input (){
- document.getElementById("inputbox").value +="6"
-}
-function input (){
-     document.getElementById("inputbox").value +="6"
-}
-function input (){
- document.getElementById("inputbox").value +="6"
-}
-function input (){
-    document.getElementById("inputbox") .value +="6"
-}
-function input (){
-    document.getElementById("inputbox") .value +="6"
-}
-function input (){
-    document.getElementById("inputbox") .value +="6"
-}
-function input (){
-    document.getElementById("inputbox") .value ="6"
-}
-function input6() {
-   document.getElementById("inputbox").value ="6"
-}
-function input (){
-    document.getElementById("inputbox").value ="6"
+
+
+function add(){
+    document.getElementById("inputbox").value += "+"
 }
 
+function sub(){
+    document.getElementById("inputbox").value += "-"
+}
+
+function mul(){
+    document.getElementById("inputbox").value += "*"
+}
+function div(){
+    document.getElementById("inputbox").value += "/"
+}
+function per(){
+    document.getElementById("inputbox").value += "%"
+}
+function result(){
+    document.getElementById("inputbox").value = eval( document.getElementById("inputbox").value)
+}
