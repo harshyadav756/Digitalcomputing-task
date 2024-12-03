@@ -13,22 +13,27 @@
             height: 100vh;
             align-items: center;
             border:solid black 1px;
-            background-color: rgb(241, 236, 229);
+            background-color: rgb(26, 25, 24);
         
         }
-        .main1{ 
+        .main1{ border: 1px solid rgb(120, 219, 214);
+            padding: 5px;
+           
+        }
+        :hover.main1{
+            box-shadow: 1px 1px 3px 3px gray;
+            background-color: rgb(90, 187, 187);
         }
         .button{font-size: xx-large;
             padding: 5px;
-
-        
-        
+            margin-left: 8px; 
         }
+       
     </style>
 </head>
 <body> <div class="main1">
 
-   <input type="text" id="inputbox">
+   <input type="text" id="inputbox" placeholder="Enter">
     <br>
     <div class="button">
         <br>
@@ -48,6 +53,7 @@
         <button onclick="add()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2">+</button>
         <button onclick="sub()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2">-</button>
         <button onclick="mul()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2">*</button>
+        <button onclick="per()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2"> %</button>
 </div><br>
 </div>
 
