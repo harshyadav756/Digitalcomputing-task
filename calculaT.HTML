@@ -1,64 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculater</title>
     <script src="cal.js"></script>
-    
+
     <style>
-        body{
-            justify-content: center;
+        body {
             display: flex;
-            height: 100vh;
             align-items: center;
-            border:solid black 1px;
+            justify-content: center;
+            height: 100vh;
+            border: solid rgb(15, 14, 14) 1px;
             background-color: rgb(26, 25, 24);
-        
+
         }
-        .main1{ border: 1px solid rgb(120, 219, 214);
+
+        .main1 {
+            width: 370px;
+            height: 575px;
+            border: 1px solid rgb(143, 167, 165);
+    
+
+        }
+
+        #button {
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            gap: 10px;
+            font-size: xx-large;
             padding: 5px;
-           
+            background-color: rgb(0, 0, 0);
+            
         }
-        :hover.main1{
-            box-shadow: 1px 1px 3px 3px gray;
-            background-color: rgb(90, 187, 187);
+
+        .button {
+            margin: 2px;
+            width: 70px;
+            height: 70px;
+            padding: 15px;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            background-color: rgb(29, 27, 27);
         }
-        .button{font-size: xx-large;
+        .button:hover{
+            background-color: rgb(63, 63, 63);
+        }
+        #inputbox {
+            height: 150px;
+            width: 97%;
             padding: 5px;
-            margin-left: 8px; 
+            background-color: black;
+            border: none;
+            text-align: end;
+            border-bottom: 1px solid rgb(168, 166, 162);
+            color: white;
+            font-size: 34px;
         }
-       
+        .equal{
+            margin: 10px;
+            width: 150px;
+            height: 50px;
+            padding: 10px;
+            margin-right: 20px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            background-color: rgb(75, 194, 75); 
+            font-size: 30px;
+            transition: 0.1s;
+        }
+        #clear{
+            background-color: rgb(223, 130, 130);
+            font-size: 20px;
+            color: white;
+        }
+      
     </style>
 </head>
-<body> 
- <div class="bg-blue-100 p-4 flex justify-between">
-        
-<div class="main1">
 
-   <input type="text" id="inputbox" placeholder="Enter">
-    <br>
-    <div class="button">
-        <br>
-        <button onclick="input1()">1</button>
-        <button onclick="input2()">2</button>
-        <button onclick="input3()">3</button><br>
-        <button onclick="input4()">4</button>
-        <button onclick="input5()">5</button>
-        <button onclick="input6()">6</button><br>
-        <button onclick="input7()">7</button>
-        <button onclick="input5()">8</button>
-        <button onclick="input9()">9</button><br>
-        <button onclick="input0()">0</button>
-        <button onclick="result()">=</button>
-        <br>
-        <button onclick="div()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2 hover:bg-gray-">/</button>
-        <button onclick="add()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2">+</button>
-        <button onclick="sub()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2">-</button>
-        <button onclick="mul()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2">*</button>
-        <button onclick="per()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2"> %</button>
-</div><br>
-</div>
+<body>
+    <div class="bg-blue-100 p-4 flex justify-center">
+        <!-- <h2>Calculator</h2> -->
+        <div class="main1">
+
+            <input type="text" id="inputbox" placeholder="Enter">
+            <br>
+            <div id="button">
+              <button class="button" id="clear" onclick="clear()">C</button> 
+                <button onclick="add()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2 button" style="color:  rgb(75, 194, 75); font-size: 20px;">+</button>
+                <button onclick="div()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2 button" style="color:  rgb(75, 194, 75); font-size: 20px;">/</button>
+                <button onclick="per()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2 button" style="color:  rgb(75, 194, 75); font-size: 20px;"> %</button>
+               
+                <br>
+                <button onclick="input1()" class="button">1</button>
+                <button onclick="input2()" class="button">2</button>
+                <button onclick="input3()" class="button">3</button>
+                <button onclick="mul()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2 button" style="color:  rgb(75, 194, 75); font-size: 20px;">*</button>
+                <br>
+
+                <button onclick="input4()" class="button">4</button>
+                <button onclick="input5()" class="button">5</button>
+                <button onclick="input6()" class="button">6</button>
+                <button onclick="sub()" class="text-2xl rounded-lg-bg-blue-100 p-4 m-2 button" style="color:  rgb(75, 194, 75); font-size: 20px;">-</button>
+                <br>
+
+                <button onclick="input7()" class="button">7</button>
+                <button onclick="input5()" class="button">8</button>
+                <button onclick="input9()" class="button">9</button>
+                <button onclick="input0()" class="button">0</button>
+                <br>
+                <button onclick="input00()" class="button">00</button>
+                <button onclick="inputdeci()" class="button">.</button>
+                <button onclick="result()" class="equal">=</button> 
+
+            </div>
+        </div>
 
 
 </html>
